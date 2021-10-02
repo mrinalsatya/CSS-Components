@@ -1,0 +1,139 @@
+body {
+  /*   background-color: rgb(241, 241, 241); */
+    background-color:black;
+  } 
+  .grid{
+      display: grid;
+      /* gap: 2rem; */
+      gap: 1px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 12rem;
+  }
+  h1
+  {
+  /*   margin-top:200px; */
+    color:black;
+  }
+  .lamp {
+    position: relative;
+    top: 170px;
+    margin: 0 auto;
+    height: 70px;
+    width: 70px;
+    background-color: brow;
+    border-radius: 0px 10px 100% 0px;
+    border-bottom: 3px solid rgb(144, 17, 58);
+    box-shadow: inset 0 -50px 50px -20px rgb(144, 17, 58);
+  }
+  
+  .lamp:before {
+    content: '';
+    display: block;
+    height: 70px;
+    width: 70px;
+    margin-left: -70px;
+    background-color: lightb;
+    border-radius: 10px 0px 0px 100%;
+    box-shadow: inset 0 -50px 50px -20px rgb(144, 17, 58);
+    border-bottom: 3px solid rgb(144, 17, 58);
+  }
+  
+  .flame {
+    position: absolute;
+    top: -65px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    background: OrangeRed;
+    border-radius: 0 110px 20px 110px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+  }
+  
+  .flame:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: OrangeRed;
+    border-radius: 0 110px 20px 110px;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    animation: flame_glare 1.5s linear infinite;
+    -webkit-animation: flame_glare 1.5s linear infinite;
+    -moz-animation: flame_glare 1.5s linear infinite;
+  }
+  
+  .top {
+    position: absolute;
+    top: -40px;
+    left: -70px;
+    height: 85px;
+    width: 120px;
+    background-color: brown;
+    border-radius: 100%;
+    border-left: 10px solid rgb(144, 17, 58);
+    border-right: 10px solid rgb(144, 17, 58);
+    transform: rotateX(-60deg);
+    -webkit-transform: rotateX(-60deg);
+    -moz-transform: rotateX(-60deg);
+    background: radial-gradient(OrangeRed, rgb(214, 23, 92) 40%, rgb(144, 17, 58));
+    background: -webkit-radial-gradient(OrangeRed, rgb(214, 23, 92) 40%, rgb(144, 17, 58));
+    background: -moz-radial-gradient(OrangeRed, rgb(214, 23, 92) 40%, rgb(144, 17, 58));
+  }
+  
+  @keyframes flame_glare {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  @keyframes glow
+  {
+      0% { text-shadow: 0 0 10px violet, 0 0 20px #fff, 0 0 30px #EAB72F, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #EAB72F, 0 0 70px #EA5C2F}
+      25% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fafa05, 0 0 40px #fafa05, 0 0 50px #2fa9ea, 0 0 60px #2fa9ea, 0 0 70px }
+      50% { textShadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #362FEA, 0 0 60px #e60073, 0 0 70px #362FEA}
+      100% { textShadow: 0 0 10px #fff, 0 0 20px #ff4da6, 0 0 30px #362FEA, 0 0 40px #EA5C2F, 0 0 50px #EAB72F, 0 0 60px #ff4da6, 0 0 70px #ff4da6}
+  }
+  
+  .glow {
+      font-size: 80px;
+      color: #fff;
+      text-align: center;
+      animation: glow 1s infinite ease-in-out alternate;
+  }
+  @keyframes    firework-animation {
+    0% {background-color : #ff8426;}
+    25% {background-color : #fffc84;}
+    50% {background-color : #ff83f4;}
+    75% {background-color : #83b6ff;}
+    100% {background-color : #ff8426;}
+}
+@-webkit-keyframes firework-animation {
+    0% {background-color : #ff8426;}
+    25% {background-color : #fffc84;}
+    50% {background-color : #ff83f4;}
+    75% {background-color : #83b6ff;}
+    100% {background-color : #ff8426;}
+}
+.fireWorkParticle {
+/*     z-index : 999; */
+    position: absolute;
+    height : 5px;
+    width : 5px;
+    border-radius : 5px;
+    animation-name : firework-animation;
+    animation-timing-function : linear;
+    animation-duration : 1s;
+    animation-iteration-count : infinite;
+}
