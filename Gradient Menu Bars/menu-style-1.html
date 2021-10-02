@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Navigation Menu Bar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/ml-gradient-menu-bars.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+	
+</head>
+<body>
+	<div class="container">
+		<h1 style="text-align: center; margin-top: 40px; margin-bottom: 40px;">Responsive Navigation Menu Bar</h1>
+		
+		<div class="navbar navbar-style-1" id="mynavbar">
+			<a href="#" class="active">Home</a>
+			<div class="dropdown"><a href="#" class="dropbtn">Dropdown 
+					<i class="fa fa-caret-down"></i>
+				</a>
+				<div class="dropdown-content"><a href="#">Link 1</a>
+					<a href="#">Link 2</a>
+					<a href="#">Link 3</a>
+				</div>
+			</div> 
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+			<a href="#" class="icon-link">
+				<i class="icon fas fa-cogs"></i><span>Settings</span>
+			</a>
+			
+			<input type="text" placeholder="Search.."><a href="javascript:void(0);" class="bars-icon" onclick="myFunction()"><i class="fas fa-bars"></i>
+			
+		</div>
+		
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script>
+		$(".bars-icon").click(function() {
+			$(".navbar").toggleClass("responsive");
+		});
+		$(".dropbtn").click(function() {
+			$(".dropdown-content").toggleClass("expanded");
+		});
+	</script>
+
+</body>
+</html>
+
