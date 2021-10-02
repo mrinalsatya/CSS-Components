@@ -5,7 +5,7 @@ body{
 #container{
     height: auto;
     width: 540px;
-    background-color: white;
+    background-color: lavender;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -95,34 +95,34 @@ body{
 }
 
 .lsb{
-    border-left: black 2px solid;
+    border-left: black 3px solid;
 }
 
 .bsb{
-    border-bottom: black 2px solid;
+    border-bottom: black 3px solid;
 }
 
 .rsb{
-    border-right: black 2px solid;
+    border-right: black 3px solid;
 }
 
 .tsb{
-    border-top: black 2px solid;
+    border-top: black 3px solid;
 }
 
 
 .ldb{
-    border-left: black 0.6px dashed;
+    border-left: black 0.7px dashed;
 }
 
 .bdb{
-    border-bottom: black 0.6px dashed;
+    border-bottom: black 0.7px dashed;
 }
 
 .rdb{
-    border-right: black 0.6px dashed;
+    border-right: black 0.7px dashed;
 }
 
 .tdb{
-    border-top: black 0.6px dashed;
+    border-top: black 0.7px dashed;
 }
