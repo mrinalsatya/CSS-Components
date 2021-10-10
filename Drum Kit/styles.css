@@ -1,0 +1,18 @@
+h1
+{
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.drum
+{
+    background-color: #351f39;
+    color: white;
+    font-size: 100px;
+    padding: 20px 20px;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
