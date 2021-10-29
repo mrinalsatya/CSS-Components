@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: black;
+        }
+        .modal{
+            display:none;
+            position: fixed; /* Stay in place */
+            z-index: 9; /* Sit on top */
+            color: white;
+            opacity:1;
+            top: 0;
+            width:60%;
+            left:30%;
+        }
+
+
+        .true{
+        display: block;
+            
+            
+        }
+        .content{
+            position: fixed;
+            top: 0;
+            padding:10px;
+            
+            animation-name: slideIn;
+            animation-duration: 0.4s;
+        }
+
+        .green{
+            color:white !important;
+            background-color: rgb(76, 165, 76);
+            
+        }
+        .red{
+            color:white !important;
+            background-color: red;
+            
+        }
+        .blue{
+            color:white !important;
+            background-color: rgb(0, 0, 255);
+        }
+
+        @keyframes slideIn {
+            from {top: -300px; opacity: 0} 
+            to {top: 0; opacity: 1}
+        }
+    </style>
+</head>
+<body>
+    <div class="modal red" id="Modal">
+        <div class="content" id="content">
+            Some Text
+            <button onclick="closemodal()">x</button>
+        </div>
+        
+        
+    </div>
+    <div>
+        <button onclick="openmodal('red')">open error modal</button>
+    </div>
+    <div>
+        <button onclick="openmodal('green')">open success modal</button>
+    </div>
+    <div>
+        <button onclick="openmodal('blue')">open info modal</button>
+    </div>
+</body>
+
+<script>
+    function openmodal(color)
+    {
+        document.getElementById("content").classList.add(color);
+        document.getElementById("Modal").classList.add("true");
+    }
+    function closemodal()
+    {
+        document.getElementById("Modal").classList.remove("true");
+    }
+</script>
+</html>
