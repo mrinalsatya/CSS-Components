@@ -11,6 +11,7 @@ const clearButton = document.getElementById('clear-display');
 const refreshButton = document.getElementById('refresh-display');
 const pad = (val, len = 2) => val.toString().padStart(len, '0');
 
+// Harsh bhabar
 // DOM event bindings
 
 //// Alarm display buttons
