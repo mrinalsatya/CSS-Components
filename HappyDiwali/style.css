@@ -1,6 +1,8 @@
 body {
   /*   background-color: rgb(241, 241, 241); */
     background-color:black;
+    font-weight: normal;
+    font-style: normal;
   } 
   .grid{
       display: grid;
@@ -13,6 +15,8 @@ body {
   {
   /*   margin-top:200px; */
     color:black;
+    font-family: sans-serif;
+    font-style: normal;
   }
   .lamp {
     position: relative;
